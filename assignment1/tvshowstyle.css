@@ -9,8 +9,13 @@ h1 {
 }
 
 #header {
-	width: 800px;
+	width: 1200px;
 	background-color: #252C27;
+}
+
+#content {
+	max-width: 1200px;
+	height: 100%;
 }
 
 #left-sidebar {
@@ -23,6 +28,7 @@ h1 {
 
 #OliverDescription {
 	visibility: hidden;
+	text-align: justify;
 }
 
 #Oliver:hover #OliverDescription {
@@ -31,6 +37,7 @@ h1 {
 
 #LaurelDescription {
 	visibility: hidden;
+	text-align: justify;
 }
 
 #Laurel:hover #LaurelDescription {
@@ -39,6 +46,7 @@ h1 {
 
 #DiggleDescription {
 	visibility: hidden;
+	text-align: justify;
 }
 
 #Diggle:hover #DiggleDescription {
@@ -47,6 +55,7 @@ h1 {
 
 #TheaDescription {
 	visibility: hidden;
+	text-align: justify;
 }
 
 #Thea:hover #TheaDescription {
@@ -55,6 +64,7 @@ h1 {
 
 #FelicityDescription {
 	visibility: hidden;
+	text-align: justify;
 }
 
 #Felicity:hover #FelicityDescription {
@@ -66,8 +76,8 @@ h1 {
 }
 
 .character-images {
-	width: 80%;
-	height: 80%;
+	width: 50%;
+	height: 50%;
 }
 
 #right-sidebar {
