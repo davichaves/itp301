@@ -1,0 +1,60 @@
+body {
+	background-color: #1E9144;
+	font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+	font-size: 50px;
+	color: #1E9144;
+}
+
+#header {
+	width: 800px;
+	background-color: #252C27;
+}
+
+#OliverDescription {
+	visibility: hidden;
+}
+
+#Oliver:hover #OliverDescription {
+	visibility: visible;
+}
+
+#LaurelDescription {
+	visibility: hidden;
+}
+
+#Laurel:hover #LaurelDescription {
+	visibility: visible;
+}
+
+#DiggleDescription {
+	visibility: hidden;
+}
+
+#Diggle:hover #DiggleDescription {
+	visibility: visible;
+}
+
+#TheaDescription {
+	visibility: hidden;
+}
+
+#Thea:hover #TheaDescription {
+	visibility: visible;
+}
+
+#FelicityDescription {
+	visibility: hidden;
+}
+
+#Felicity:hover #FelicityDescription {
+	visibility: visible;
+}
+
+footer {
+	text-align: right;
+	background-color: #252C27;
+	color: #1E9144;
+}
