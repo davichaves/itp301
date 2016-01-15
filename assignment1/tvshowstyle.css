@@ -13,6 +13,14 @@ h1 {
 	background-color: #252C27;
 }
 
+#left-sidebar {
+	padding: 10px 10px 10px 10px;
+	float: left;
+	width: 20%;
+	height: 100%;
+	background-color: #3C5E47;
+}
+
 #OliverDescription {
 	visibility: hidden;
 }
@@ -51,6 +59,44 @@ h1 {
 
 #Felicity:hover #FelicityDescription {
 	visibility: visible;
+}
+
+.character-name {
+	text-align: center;
+}
+
+.character-images {
+	width: 80%;
+	height: 80%;
+}
+
+#right-sidebar {
+	padding: 10px 10px 10px 10px;
+	float: right;
+	width: 20%;
+	height: 20%;
+	margin-left: 1%;
+	background-color: #141B16;
+	color: #1E9144;
+}
+
+.main-content-paragraph {
+	padding: 10px 10px 10px 10px;
+	text-align: justify;
+}
+
+#main-content {
+	margin-left: 21%;
+	padding: 10px 10px 10px 10px;
+	background-color: #339966;
+	font-size: 120%;
+}
+
+#main-content-image {
+	float: left;
+	padding: 10px 10px 10px 10px;
+	width: 600px;
+	height: 400px;
 }
 
 footer {
