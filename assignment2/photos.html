@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Vegas Example</title>
+	<title>Davi's Photo Gallery</title>
 	<style>
 		#container {
-			width: 800px;
+			width: 900px;
 			margin: auto;
 		}
 		#thumbnails, #main {
@@ -16,6 +16,9 @@
 			opacity: 0.5;
 			margin: 5px;
 			border-color: #F00;
+		}
+		.selected {
+			border-width: 2px;
 		}
 		#caption {
 			font-size: 14pt;
@@ -59,17 +62,21 @@
 	</script>
 </head>
 <body>
+	<center><h1>Davi's Photo Gallery</h1></center>
 	<div id="container">
-		<div id="thumbnails">
-			<img src="1.jpg" id="thumb1" class="thumb" border="0">
-			<img src="2.jpg" id="thumb2" class="thumb" border="0">
-			<img src="3.jpg" id="thumb3" class="thumb" border="0">
-		</div>
 		<div id="main">
 			<img src="2.jpg" id="main-img">
 			<div id="caption">
 				Bellagio Fountain Show
 			</div>
+		</div>
+		<div id="thumbnails">
+			<img src="1.jpg" id="thumb1" class="thumb selected">
+			<img src="2.jpg" id="thumb2" class="thumb">
+			<img src="3.jpg" id="thumb3" class="thumb">
+			<img src="4.jpg" id="thumb4" class="thumb">
+			<img src="5.jpg" id="thumb5" class="thumb">
+			<img src="6.jpg" id="thumb6" class="thumb">
 		</div>
 	</div>
 </body>
