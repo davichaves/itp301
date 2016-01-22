@@ -8,18 +8,21 @@
 			width: 900px;
 			margin: auto;
 		}
+
 		#thumbnails, #main {
 			text-align: center;
 		}
+
 		.thumb {
 			height: 80px;
 			opacity: 0.5;
 			margin: 5px;
-			border-color: #F00;
 		}
+
 		.selected {
-			border-width: 2px;
+			border: 2px solid #F00;
 		}
+
 		#caption {
 			font-size: 14pt;
 			margin: 10px;
@@ -39,24 +42,38 @@
 			});
 
 			$('.thumb').on('click', function(){
-				$('.thumb').attr('border', 0);
-				$(this).attr('border', 2);
-				//$('#main-img').attr('src', $(this).attr('src'))
+				$('.thumb').removeClass('selected');
+				$(this).addClass('selected');
 			});
 
 			$('#thumb1').on('click', function(){
 				$('#main-img').hide().attr('src', '1.jpg').fadeIn();
-				$('#caption').html('Las Vegas Sign');
+				$('#caption').html('Me at a conference');
 			});
 
 			$('#thumb2').on('click', function(){
 				$('#main-img').hide().attr('src', '2.jpg').fadeIn();
-				$('#caption').html('Bellagio Fountain Show');
+				$('#caption').html('Me at a conference with my tech team');
 			});
 
 			$('#thumb3').on('click', function(){
 				$('#main-img').hide().attr('src', '3.jpg').fadeIn();
-				$('#caption').html('Ciry View');
+				$('#caption').html('Me with my BRASA team');
+			});
+
+			$('#thumb4').on('click', function(){
+				$('#main-img').hide().attr('src', '4.jpg').fadeIn();
+				$('#caption').html('Me and my friends at a barbecue');
+			});
+
+			$('#thumb5').on('click', function(){
+				$('#main-img').hide().attr('src', '5.jpg').fadeIn();
+				$('#caption').html('Me and my friends with a famous brazilian actor');
+			});
+
+			$('#thumb6').on('click', function(){
+				$('#main-img').hide().attr('src', '6.jpg').fadeIn();
+				$('#caption').html('Me and my friends at Yosemite');
 			});
 		});
 	</script>
@@ -65,9 +82,9 @@
 	<center><h1>Davi's Photo Gallery</h1></center>
 	<div id="container">
 		<div id="main">
-			<img src="2.jpg" id="main-img">
+			<img src="1.jpg" id="main-img">
 			<div id="caption">
-				Bellagio Fountain Show
+				Me at a conference
 			</div>
 		</div>
 		<div id="thumbnails">
