@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Vegas Example</title>
+	<style>
+		#container {
+			width: 800px;
+			margin: auto;
+		}
+		#thumbnails, #main {
+			text-align: center;
+		}
+		.thumb {
+			height: 80px;
+			opacity: 0.5;
+			margin: 5px;
+			border-color: #F00;
+		}
+		#caption {
+			font-size: 14pt;
+			margin: 10px;
+		}
+	</style>
+
+	<script src="http://code.jquery.com/jquery-1.12.0.js"></script>
+	<script>
+		$(function(){
+			// jQuery code goes here.
+			$('.thumb').on('mouseenter', function(){
+				$(this).fadeTo(0, 1.0);
+			});
+
+			$('.thumb').on('mouseleave', function(){
+				$(this).fadeTo(0, 0.5);
+			});
+
+			$('.thumb').on('click', function(){
+				$('.thumb').attr('border', 0);
+				$(this).attr('border', 2);
+				//$('#main-img').attr('src', $(this).attr('src'))
+			});
+
+			$('#thumb1').on('click', function(){
+				$('#main-img').hide().attr('src', '1.jpg').fadeIn();
+				$('#caption').html('Las Vegas Sign');
+			});
+
+			$('#thumb2').on('click', function(){
+				$('#main-img').hide().attr('src', '2.jpg').fadeIn();
+				$('#caption').html('Bellagio Fountain Show');
+			});
+
+			$('#thumb3').on('click', function(){
+				$('#main-img').hide().attr('src', '3.jpg').fadeIn();
+				$('#caption').html('Ciry View');
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="thumbnails">
+			<img src="1.jpg" id="thumb1" class="thumb" border="0">
+			<img src="2.jpg" id="thumb2" class="thumb" border="0">
+			<img src="3.jpg" id="thumb3" class="thumb" border="0">
+		</div>
+		<div id="main">
+			<img src="2.jpg" id="main-img">
+			<div id="caption">
+				Bellagio Fountain Show
+			</div>
+		</div>
+	</div>
+</body>
+</html>

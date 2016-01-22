@@ -1,0 +1,90 @@
+<style>
+	#menu * {
+		margin: 0;
+		padding:0;
+	}
+
+	#menu li{
+		position: relative;
+		float: left;
+		list-style: none;
+	}
+
+	#menu li a {
+		width:100px;
+		height: 30px;
+		display: block;
+		text-decoration:none;
+		text-align: center;
+		line-height: 30px;
+		background-color: #063;
+		color: #9CF;
+	}
+
+	#menu li a:hover {
+		background-color: #FF0;
+	}
+
+	#menu ul ul {
+		/* Align items one under another. */
+		position: absolute;
+		top: 30px;
+		/* Hide sub menus */
+		/*visibility: hidden;*/
+		display: none;
+	}
+
+	/*#menu ul li:hover > ul {
+		visibility: visible;
+	}*/
+
+	#menu ul ul ul {
+		position: absolute;
+		top: 0px;
+		left: 100px;
+	}
+
+</style>
+
+<script src="http://code.jquery.com/jquery-1.12.0.js"></script>
+<script>
+	$(function(){
+		// jQuery code goes here.
+		$('#menu ul li').on('mouseenter mouseleave', function() {
+			$(this).children('ul').slideToggle(400);
+		});
+	});
+</script>
+
+<div id="menu">
+	<ul>
+		<li> <a href="#">Apple</a>
+			<ul>
+				<li> <a href="#">iPhone 3GS</a></li>
+				<li> <a href="#">iPhone 4</a></li>
+				<li> <a href="#">iPhone 4S</a></li>
+			</ul>
+		</li>
+		<li> <a href="#">Motorola</a>
+			<ul>
+				<li> <a href="#">Atrix 2</a></li>
+				<li> <a href="#">Droid</a>
+					<ul>
+						<li> <a href="#">Droid 2</a></li>
+						<li> <a href="#">Droid x2</a></li>
+						<li> <a href="#">Droid Razr</a></li>
+						<li> <a href="#">Droid 4</a></li>        	
+					</ul>
+				</li>
+				<li> <a href="#">Electrify</a></li>
+			</ul>
+		</li>
+		<li> <a href="#">Samsung</a>
+			<ul>
+				<li> <a href="#">Galaxy Nexus</a></li>
+				<li> <a href="#">Galaxy S2</a></li>
+				<li> <a href="#">Strotosphere</a></li>
+			</ul>
+		</li>
+	</ul>        
+</div>
