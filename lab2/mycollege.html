@@ -25,6 +25,48 @@
 	<!-- Load jQuery Library -->
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<!-- Wait for page & write jQuery code -->
+	<script type="text/javascript">
+		$(function() {
+			$('.content').hide();
+
+			$('.title').on('click', function(){
+				$(this).next().slideToggle();
+				$(this).next().addClass('highlight');
+			});
+
+			$('#history').on('mouseenter', function(){
+				$(this).html('<i>History</i>');
+			});
+
+			$('#history').on('mouseleave', function(){
+				$(this).html('History');
+			});
+
+			$('#founders').on('mouseleave', function(){
+				$(this).html('The Era of the Founders');
+			});
+
+			$('#founders').on('mouseenter', function(){
+				$(this).html('<i>The Era of the Founders</i>');
+			});
+
+			$('#olympic').on('mouseleave', function(){
+				$(this).html('USC’s Olympic Heritage');
+			});
+
+			$('#olympic').on('mouseenter', function(){
+				$(this).html('<i>USC’s Olympic Heritage</i>');
+			});
+
+			$('#armed-force').on('mouseleave', function(){
+				$(this).html('Tradition of Support for the Armed Forces');
+			});
+
+			$('#armed-force').on('mouseenter', function(){
+				$(this).html('<i>Tradition of Support for the Armed Forces</i>');
+			});
+		});
+	</script>
 	
 </head>
 <body>
