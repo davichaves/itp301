@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functions Lab</title>
+</head>
+<body>
+  <div style="float:left; width:500px;">
+    <form id="form1" name="f1" method="post" action="">
+      <p>Image Scaling</p>
+      <p>
+        <label>Width
+          <input name="w" type="text" id="w" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Height 
+          <input name="h" type="text" id="h" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Border
+          <input name="b" type="text" id="b" />
+        </label>
+      </p>
+      <p>
+        <label>
+          <!-- This button should have 'onclick' trigger that calls 'scaleImage()' function. When 'scaleImage()' is called, you need to pass in width, height, and border as parameters. All data should come from form fields. -->
+          <input type="button" name="Button" value="Scale Image">
+        </label>
+      </p>
+      <p>
+        <label>
+          <!-- This button should have 'onclick' trigger that calls 'imageInfo' function. -->
+          <input type="button" name="Button" value="Current Image Info">
+        </label>
+      </p>
+    </form>
+  </div>
+  <div style="float:left;width:400px">
+    <img name="theimage" id="theimage" src="familyguy.jpg" style="width:320px; height:400px" />
+  </div>
+  <script>
+
+    /******
+     * This function gathers all information about the image and outputs it to an alert box.
+     * The final message should say "The image has height of X, width of Y, and border of Z".
+     * The first part of the function is complete. You need to continue adding (concatenate) more values to 'theinfo' variable.
+     ******/
+    function imageInfo(){
+      var theinfo = "The image has height of ";
+      theinfo = theinfo + document.getElementById('theimage').style.height;
+
+      // Write function code here.
+
+      alert(theinfo);
+    };
+
+    /******
+     * This function has three parameters - when it's called, three pieces of information should be given.
+     * These three parameters are width, height, and border.
+     * This function should have three lines of code.
+     * Each line should set a new style property for the image: width, height, and border.
+     * There is only one image on the page, so you don't have to pass the image name as a parameter.
+     ******/
+    function scaleImage (newWidth, newHeight, newBorder) {
+      // Write function code here.
+    };
+  </script>
+</body>
+</html>

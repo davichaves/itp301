@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Vegas Example</title>
+  <style>
+  	#container {
+  		width:	800px;
+  		margin:	auto;
+  	}
+  	#thumbnails, #main, .controls {
+  		text-align: center;
+      margin:     10px 0px;
+  	}
+  	.thumb {
+  		height:		80px;
+  		opacity: 	0.5;
+  		margin:		5px;
+  	}
+  	#caption {
+  		font-size:	14pt;
+  		margin:			10px;
+  	}
+  </style>
+ </head>
+ <body>
+  <div id="container">
+  	<div id="thumbnails">
+  		<img src="1.jpg" id="thumb1" class="thumb" border="2">
+  		<img src="2.jpg" id="thumb2" class="thumb" border="0">
+  		<img src="3.jpg" id="thumb3" class="thumb" border="0">
+  	</div>
+    <div class="controls">
+      Small |
+      Medium |
+      Large
+    </div>
+    <div class="controls">
+      Height: <input type="text" placeholder="400px" id="heightField">
+      <input type="submit">
+    </div>
+  	<div id="main">
+  		<img src="2.jpg" id="main-img">
+  		<div id="caption">
+  			Bellagio Fountain Show
+  		</div>
+  	</div>
+  </div>
+ </body>
+</html>
