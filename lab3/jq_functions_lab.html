@@ -27,19 +27,19 @@
       <p>
         <label>
           <!-- This button should have 'onclick' trigger that calls 'scaleImage()' function. When 'scaleImage()' is called, you need to pass in width, height, and border as parameters. All data should come from form fields. -->
-          <input type="button" name="Button" value="Scale Image">
+          <input type="button" name="Button" value="Scale Image" onclick="scaleImage('document.getElementById('w').value','100','')">
         </label>
       </p>
       <p>
         <label>
           <!-- This button should have 'onclick' trigger that calls 'imageInfo' function. -->
-          <input type="button" name="Button" value="Current Image Info">
+          <input type="button" name="Button" value="Current Image Info" onclick="imageInfo()">
         </label>
       </p>
     </form>
   </div>
   <div style="float:left;width:400px">
-    <img name="theimage" id="theimage" src="familyguy.jpg" style="width:320px; height:400px" />
+    <img name="theimage" id="theimage" src="familyguy.jpg" style="width:320px; height:400px;" border="1px"/>
   </div>
   <script>
 
@@ -51,6 +51,8 @@
     function imageInfo(){
       var theinfo = "The image has height of ";
       theinfo = theinfo + document.getElementById('theimage').style.height;
+      theinfo = theinfo + ", width of " + document.getElementById('theimage').style.width;
+      theinfo = theinfo + ", and border of " + document.getElementById('theimage').border;
 
       // Write function code here.
 
@@ -65,6 +67,9 @@
      * There is only one image on the page, so you don't have to pass the image name as a parameter.
      ******/
     function scaleImage (newWidth, newHeight, newBorder) {
+      document.getElementById('theimage').style.height = newHeight;
+      document.getElementById('theimage').style.width = newWidth;
+      document.getElementById('theimage').border = newBorder;
       // Write function code here.
     };
   </script>
