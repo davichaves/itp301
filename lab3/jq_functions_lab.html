@@ -27,7 +27,7 @@
       <p>
         <label>
           <!-- This button should have 'onclick' trigger that calls 'scaleImage()' function. When 'scaleImage()' is called, you need to pass in width, height, and border as parameters. All data should come from form fields. -->
-          <input type="button" name="Button" value="Scale Image" onclick="scaleImage('document.getElementById('w').value','100','')">
+          <input type="button" name="Button" value="Scale Image" onclick="scaleImage(document.getElementById('w').value,document.getElementById('h').value,document.getElementById('b').value)">
         </label>
       </p>
       <p>
@@ -67,8 +67,8 @@
      * There is only one image on the page, so you don't have to pass the image name as a parameter.
      ******/
     function scaleImage (newWidth, newHeight, newBorder) {
-      document.getElementById('theimage').style.height = newHeight;
-      document.getElementById('theimage').style.width = newWidth;
+      document.getElementById('theimage').style.height = newHeight + "px";
+      document.getElementById('theimage').style.width = newWidth + "px";
       document.getElementById('theimage').border = newBorder;
       // Write function code here.
     };
