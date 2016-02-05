@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Style Properties Lab</title>
+	<script type="text/javascript">
+	function toggleVisibilityDiv2(){
+		var div = document.getElementById('div2');
+	    if (div.style.display !== 'none') {
+	        div.style.display = 'none';
+	    }
+	    else {
+	        div.style.display = 'block';
+	    }
+	}
+	</script>
+</head>
+<body>
+	Div 1 (JS): <button onclick="document.getElementById('div1').style.display='block'">Show</button> | <button onclick="document.getElementById('div1').style.display='none'">Hide</button> | <button onclick="document.getElementById('div1').style.lineHeight=2">Change line spacing to '2'</button>
+	<br>
+	Div 2 (JS): <button onclick="toggleVisibilityDiv2()">Toggle Visibility</button> | <button onclick="">Move to (450,100)</button> | <button onclick="document.getElementById('div2').style.backgroundColor=black">Change background color to black</button>
+	<br>
+	Div 3 (jQ): <button id="toggleDiv3">Toggle Display</button> | <button id="moveDiv3">Move to (100,350)</button> | <button id="doubleDiv3">Double height & width</button>
+	<br>
+	<div id="div1" style="margin: 10px 0px; padding: 10px; width: 300px; background-color: #CCC; position: absolute; top: 100px; left: 100px; visibility: visible; display: block;">
+		<span style="font-size: 14pt;">First Div</span>
+		<hr>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus lectus ut libero sollicitudin rhoncus. Pellentesque id imperdiet ligula. Vivamus molestie ipsum justo, ut scelerisque sapien fringilla sodales. Suspendisse efficitur enim id placerat pellentesque. Sed egestas semper elit vitae sagittis. Praesent purus mauris, pretium at neque accumsan, gravida ullamcorper nulla. Mauris purus augue, tempus in fringilla et, luctus a ex.
+	</div>
+
+	<div id="div2" style="margin: 10px 0px; padding: 10px; width: 300px; background-color: #900; color: #CCC; position: absolute; top: 150px; left: 150px; visibility: visible; display: block;">
+		<span style="font-size: 14pt;">Second Div</span>
+		<hr>
+		Cras volutpat neque a odio posuere, tempor posuere ante sollicitudin. Nullam suscipit erat vitae eros auctor, vel finibus turpis sagittis. Suspendisse posuere, tellus auctor mattis luctus, mi ipsum auctor dolor, in luctus augue turpis non dui. Integer quis accumsan quam. Phasellus vitae malesuada tellus. Maecenas et quam purus.
+	</div>
+
+	<div id="div3" style="margin: 10px 0px; padding: 10px; width: 300px; background-color: #FC0; position: absolute; top: 200px; left: 200px; visibility: visible; display: block;">
+		<span style="font-size: 14pt;">Third Div</span>
+		<hr>
+		Praesent ut diam at arcu vehicula consectetur. Donec dolor erat, consequat nec ante quis, lobortis pharetra enim. Suspendisse sed malesuada lectus. Vestibulum auctor, neque eu scelerisque dapibus, nisl eros mollis nunc, quis ultricies risus nulla a elit. Aliquam metus purus, mollis et aliquet ac, cursus quis nulla.
+	</div>
+	<script src="http://code.jquery.com/jquery-1.12.0.js"></script>
+	<script>
+
+	</script>
+</body>
+</html>
