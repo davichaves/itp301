@@ -9,8 +9,10 @@
 	var mathOperation = '';
 
 	function reset() {
-	// Clear all variables
-	// Clear calculator display / input box
+		var firstNum = 0;
+		var secondNum = 0;
+		var mathOperation = '';
+		document.getElementById('content').value = '';
 	}
 
 	function saveFunction(newMathOp) {
@@ -25,12 +27,23 @@
 
 	function performCalculation() {
 	// OPTIONAL: Check if 'firstNum' is a valid number.
-	
-	// OPTIONAL: Check if 'mathOperation' is initialized.
 
-	// Use if-statements to perform correct math operation (addition, subtraction, multiplication, division)
+		if (mathOperation !== '') {
+			secondNum = document.getElementById('content').value;
+			secondNum = parseInt(secondNum);
 
-	// Display result on calculator display / input box.
+			if (mathOperation == 'add') {
+				document.getElementById('content').value = firstNum + secondNum;
+			} else if (mathOperation == 'sub') {
+				document.getElementById('content').value = firstNum - secondNum;
+			} else if (mathOperation == 'mult') {
+				document.getElementById('content').value = firstNum * secondNum;
+			} else if (mathOperation == 'div') {
+				document.getElementById('content').value = firstNum / secondNum;
+			} else {
+				alert("WTF!");
+			}
+		}
 
 	}
 	</script>
@@ -53,10 +66,10 @@
 			</div>
 			<br class="bc" />
 			<div style="width:45%; text-align:center">
-				<a href="#" onClick=""><img src="clear.gif" alt="clear"/></a>
+				<a href="#" onClick="reset()"><img src="clear.gif" alt="clear"/></a>
 			</div>
 			<div style="width:45%; text-align:center">
-				<a href="#" onClick=""><img src="equal.gif" alt="equal" /></a></td>
+				<a href="#" onClick="performCalculation()"><img src="equal.gif" alt="equal" /></a></td>
 			</div>
 			<br class="bc" />
 			<div style="width:22%; text-align:center">
@@ -117,7 +130,7 @@
 				</a>
 			</div>
 			<div style="width:22%; text-align:center">
-				<a href="#" onClick="">
+				<a href="#" onClick="saveFunction('mult')">
 					<img src="m.gif" alt="mult" name="multiply" />
 				</a>
 			</div>
@@ -125,14 +138,14 @@
 			<div style="width:22%; text-align:center">
 			</div>
 			<div style="width:22%; text-align:center">
-				<a href="#" onClick="">
+				<a href="#" onClick="document.getElementById('content').value=document.getElementById('content').value+'0'">
 					<img src="0.gif"  alt="0" />
 				</a>
 			</div>
 			<div style="width:22%; text-align:center">
 			</div>
 			<div style="width:22%; text-align:center">
-				<a href="#" onClick="">
+				<a href="#" onClick="saveFunction('div')">
 					<img src="divide.gif" alt="div" name="d" />
 				</a>
 			</div>
