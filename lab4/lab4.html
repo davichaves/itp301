@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Style Properties Lab</title>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript">
 	function toggleVisibilityDiv2(){
 		var div = document.getElementById('div2');
@@ -13,14 +14,29 @@
 	        div.style.display = 'block';
 	    }
 	}
+
+	$(function() {
+		$('#toggleDiv3').on('click', function(){
+			$('#div3').toggle();
+		});
+		$('#moveDiv3').on('click', function(){
+			$("#div3").css({top: 350, left: 100, position:'absolute'});
+		});
+		$('#doubleDiv3').on('click', function(){
+			var height = $("#div3").height();
+			$("#div3").height(2*height);
+			var width = $("#div3").width();
+			$("#div3").width(2*width);
+		});
+	});
 	</script>
 </head>
 <body>
 	Div 1 (JS): <button onclick="document.getElementById('div1').style.display='block'">Show</button> | <button onclick="document.getElementById('div1').style.display='none'">Hide</button> | <button onclick="document.getElementById('div1').style.lineHeight=2">Change line spacing to '2'</button>
 	<br>
-	Div 2 (JS): <button onclick="toggleVisibilityDiv2()">Toggle Visibility</button> | <button onclick="">Move to (450,100)</button> | <button onclick="document.getElementById('div2').style.backgroundColor=black">Change background color to black</button>
+	Div 2 (JS): <button onclick="toggleVisibilityDiv2()">Toggle Visibility</button> | <button onclick="var div = document.getElementById('div2'); div.style.left = '450px'; div.style.top = '100px';">Move to (450,100)</button> | <button onclick="document.getElementById('div2').style.backgroundColor='black'">Change background color to black</button>
 	<br>
-	Div 3 (jQ): <button id="toggleDiv3">Toggle Display</button> | <button id="moveDiv3">Move to (100,350)</button> | <button id="doubleDiv3">Double height & width</button>
+	Div 3 (jQ): <button id="toggleDiv3" onclick="">Toggle Display</button> | <button id="moveDiv3">Move to (100,350)</button> | <button id="doubleDiv3">Double height & width</button>
 	<br>
 	<div id="div1" style="margin: 10px 0px; padding: 10px; width: 300px; background-color: #CCC; position: absolute; top: 100px; left: 100px; visibility: visible; display: block;">
 		<span style="font-size: 14pt;">First Div</span>
