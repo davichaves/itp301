@@ -6,12 +6,13 @@
 	<style>
 		#main-img {
 			width: auto;
-			height: 600px;
 			margin: auto;
 		}
 
 		#main {
+			height: 650px;
 			text-align: center;
+			margin: 10px;
 		}
 
 		#caption {
@@ -22,17 +23,21 @@
 
 	<script type="text/javascript">
 
-		var photos = ["1.jpg", "2.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"];
+		var photos = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"];
 
 		var captions = ["Me at a conference", "Me and BRASA's Tech team", "USC's BRASA", "Me and the homies", "Friends at a conference", "Me and friends at Yosemite", "BRASA Members", "Me and friends", "BRASA Retreat", "Baby me"];
 
-		var height = ["600px", "610px", "620px", "630px", "640px", "650px", "660px", "670px", "680px", "690px"];
+		var heights = ["500", "510", "520", "530", "540", "550", "560", "570", "580", "590"];
+
+		window.onload = function() {
+			getPhoto();
+		};
 
 		function getPhoto() {
-			var random=Math.floor(Math.random()*10);
-			console.log(random);
-			document.getElementById('main-img').src = photos[random]; 
-			document.getElementById('caption').innerHTML = captions[random]; 
+			var random = Math.floor(Math.random()*10);
+			document.getElementById('main-img').src = photos[random];
+			document.getElementById('caption').innerHTML = captions[random];
+			document.getElementById('main-img').height = heights[random]; 
 		}
 	</script>
 </head>
@@ -44,8 +49,8 @@
 			<div id="caption">
 				
 			</div>
-			<button onclick="getPhoto()">Get a photo!</button>
 		</div>
+		<center><button onclick="getPhoto()">Get a photo!</button></center>
 	</div>
 </body>
 </html>
