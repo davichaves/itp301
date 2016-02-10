@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Davi's Photo Gallery</title>
+	<style>
+		#main-img {
+			width: auto;
+			height: 600px;
+			margin: auto;
+		}
+
+		#main {
+			text-align: center;
+		}
+
+		#caption {
+			font-size: 14pt;
+			margin: 10px;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		var photos = ["1.jpg", "2.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"];
+
+		var captions = ["Me at a conference", "Me and BRASA's Tech team", "USC's BRASA", "Me and the homies", "Friends at a conference", "Me and friends at Yosemite", "BRASA Members", "Me and friends", "BRASA Retreat", "Baby me"];
+
+		var height = ["600px", "610px", "620px", "630px", "640px", "650px", "660px", "670px", "680px", "690px"];
+
+		function getPhoto() {
+			var random=Math.floor(Math.random()*10);
+			console.log(random);
+			document.getElementById('main-img').src = photos[random]; 
+			document.getElementById('caption').innerHTML = captions[random]; 
+		}
+	</script>
+</head>
+<body>
+	<center><h1>Davi's Photo Gallery</h1></center>
+	<div id="container">
+		<div id="main">
+			<img src=".jpg" id="main-img">
+			<div id="caption">
+				
+			</div>
+			<button onclick="getPhoto()">Get a photo!</button>
+		</div>
+	</div>
+</body>
+</html>
