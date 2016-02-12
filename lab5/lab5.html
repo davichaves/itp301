@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Email Validation Lab</title>
+	<script type="text/javascript">
+		function validate() {
+			var input = document.getElementById('email').value
+			var atPos = input.lastIndexOf("@");
+		    var dotPos = input.lastIndexOf(".");
+		    if (atPos<1 || dotPos<atPos+2 || dotPos+2>=input.length) {
+		        document.getElementById('error').innerHTML = "Not a valid e-mail address!";
+		    } else {
+		    	document.getElementById('error').innerHTML = "Valid e-mail address!";
+		    }
+		}
+		function analyze() {
+			var input = document.getElementById('email').value
+			var atPos = input.lastIndexOf("@");
+			document.getElementById('prefix').innerHTML = input.slice(0,atPos);
+			document.getElementById('domain').innerHTML = input.slice(atPos+1,input.length);
+		}
+	</script>
+</head>
+<body>
+	Email: <input type="text" id="email">
+	<button onclick="validate()">Validate</button>
+	<button onclick="analyze()">Analyze</button>
+	<br><br>
+	<div id="error"></div>
+	<br/><br/>
+	Email Prefix: <span id="prefix">ttrojan</span> <!-- replace 'ttrojan' -->
+	<br/>
+	Email Domain: <span id="domain">usc.edu</span> <!-- replace 'usc.edu' -->
+</body>
+</html>
