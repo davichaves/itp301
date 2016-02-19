@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lab 6</title>
+	<style id="jsbin-css">
+		#num1, #num2, #result {
+			width: 80px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h3>Contact Submission</h3>
+	First Name: <input type="text" id="fName">
+	<br/>
+	Last Name: <input type="text" id="lName">
+	<br/>
+	Phone: <input type="text" id="phoneNum">
+	<br/>
+	Email: <input type="text" id="email">
+	<br/>
+	<button onclick="submitContact()">Submit</button>
+	
+	<h3>Info</h3>
+	<table>
+		<tr>
+			<td>Full Name:</td>
+			<td id="fullName">Trojan, Tommy</td>
+		</tr>
+		<tr>
+			<td>Phone:</td>
+			<td id="phone">(123) 456-7890</td>
+		</tr>
+		<tr>
+			<td>Email Prefix:</td>
+			<td id="emailPrefix">ttrojan</td>
+		</tr>
+		<tr>
+			<td>Email Domain:</td>
+			<td id="emailDomain">usc.edu</td>
+		</tr>
+	</table>
+	
+	<hr>
+	
+	<h3>Practice: Function Return & Loops</h3>
+	<input type="text" id="num1"> ^ (to the power of) 
+	<input type="text" id="num2"> = 
+	<input type="text" id="result" disabled>
+	<button onclick="calculatePower()">Calculate</button>
+	<div id="mathMsg"></div>
+
+	<script src="main.js"></script>
+</body>
+</html>
