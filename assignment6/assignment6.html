@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Davi's Photo Gallery</title>
+	<style>
+		#main-img {
+			height: 400px;
+			width: auto;
+		}
+
+		.medium-img {
+			height: 200px;
+			width: auto;
+		}
+
+		#main {
+			height: 500px;
+			text-align: center;
+			margin: 10px;
+		}
+
+		#medium {
+			height: 300px;
+			text-align: center;
+			margin: 10px;
+		}
+
+		#caption {
+			font-size: 14pt;
+			margin: 10px;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		var photos = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"];
+
+		var captions = ["Me at a conference", "Me and BRASA's Tech team", "USC's BRASA", "Me and the homies", "Friends at a conference", "Me and friends at Yosemite", "BRASA Members", "Me and friends", "BRASA Retreat", "Baby me"];
+
+		window.onload = function() {
+			getPhoto();
+			getPhoto2();
+		};
+
+		function getPhoto() {
+			var random = Math.floor(Math.random()*10);
+			document.getElementById('main-img').src = photos[random];
+			document.getElementById('caption').innerHTML = captions[random];
+		}
+
+		function getPhoto2() {
+			var random = Math.floor(Math.random()*10);
+			document.getElementById('medium-img1').src = photos[random];
+			random = Math.floor(Math.random()*10);
+			document.getElementById('medium-img2').src = photos[random];
+			random = Math.floor(Math.random()*10);
+			document.getElementById('medium-img3').src = photos[random];
+		}
+
+		function createThumbnails(data) {
+		    var html = '';
+		    
+		    // Assume data is an array of arrays,
+		    // containing strings.
+
+		    html += '<table class="data">';
+		    
+		    // Step through the rows of the data.
+		    for(var row in data) {
+		        var rowData = data[row];
+		        
+		        if(row == 0) {
+		            html += '<tr style="font-weight: bold;">';
+		        }
+		        else {
+		            html += '<tr>';
+		        }
+		        
+		        // Step through the columns in
+		        // this row.
+		        for(var col in rowData) {
+		            var colData = rowData[col];
+		            
+		            html += '<td>';
+		            html += colData;
+		            html += '</td>';
+		        }
+		        
+		        html += '</tr>';
+		    }
+		    
+		    html += '</table>';
+		    
+		    return html;
+		}
+
+		// This function takes the formatted HTML
+		// and inserts it into the document as
+		// 'child' HTML of the specified element.
+		function insertHTML(id, html) {
+		    var el = document.getElementById(id);
+		    
+		    if(!el) {
+		        alert('Element with id ' + id + ' not found.');
+		    }
+		    
+		    el.innerHTML = html;
+		}
+
+		// This function ties things up.
+		function run() {
+		    var html = createTable(data);
+		    
+		    insertHTML('tabledata', html);
+		}
+	</script>
+</head>
+<body>
+	<center><h1>Davi's Photo Gallery</h1></center>
+	<div id="container">
+		<div id="main">
+			<img src="" id="main-img">
+			<div id="caption">
+				
+			</div>
+		</div>
+		<div id="medium">
+			<img src="" id="medium-img1" class="medium-img">
+			<img src="" id="medium-img2" class="medium-img">
+			<img src="" id="medium-img3" class="medium-img">
+			<center><button onclick="getPhoto2()">Get a photo!</button></center>
+		</div>
+		<div id="thumbnails">
+			
+		</div>
+	</div>
+</body>
+</html>

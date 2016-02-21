@@ -17,10 +17,10 @@ function submitContact(){
 function calculatePower(){
 	var input = document.getElementById('num1').value
 	var input2 = document.getElementById('num2').value
-	if (!isNaN(input) || !isNaN(input2)) {
-		document.getElementById('result').value = power(firstNum, secondNum);
-	} else {
+	if (isNaN(input) || isNaN(input2)) {
 		document.getElementById('mathMsg').innerHTML = "invalid input!";
+	} else {
+		document.getElementById('result').value = power(input, input2);
 	}
 }
 
