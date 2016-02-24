@@ -5,23 +5,23 @@
 	<title>Davi's Photo Gallery</title>
 	<style>
 		#main-img {
-			height: 400px;
+			height: 300px;
 			width: auto;
 		}
 
 		.medium-img {
-			height: 200px;
+			height: 150px;
 			width: auto;
 		}
 
 		#main {
-			height: 500px;
+			height: 350px;
 			text-align: center;
 			margin: 10px;
 		}
 
 		#medium {
-			height: 300px;
+			height: 170px;
 			text-align: center;
 			margin: 10px;
 		}
@@ -41,6 +41,16 @@
 		window.onload = function() {
 			getPhoto();
 			getPhoto2();
+			for (i=0; i<10; i++){
+				var image = document.createElement("img");
+				image.id = i;
+				image.setAttribute('src', photos[i]);
+				image.style.cssText = 'height:70px; margin: 3px;'
+				image.addEventListener('click', function(){
+					display(this.id);
+				});
+				document.querySelector("#thumbnails").appendChild(image);
+			}
 		};
 
 		function getPhoto() {
@@ -58,71 +68,19 @@
 			document.getElementById('medium-img3').src = photos[random];
 		}
 
-		function createThumbnails(data) {
-		    var html = '';
-		    
-		    // Assume data is an array of arrays,
-		    // containing strings.
-
-		    html += '<table class="data">';
-		    
-		    // Step through the rows of the data.
-		    for(var row in data) {
-		        var rowData = data[row];
-		        
-		        if(row == 0) {
-		            html += '<tr style="font-weight: bold;">';
-		        }
-		        else {
-		            html += '<tr>';
-		        }
-		        
-		        // Step through the columns in
-		        // this row.
-		        for(var col in rowData) {
-		            var colData = rowData[col];
-		            
-		            html += '<td>';
-		            html += colData;
-		            html += '</td>';
-		        }
-		        
-		        html += '</tr>';
-		    }
-		    
-		    html += '</table>';
-		    
-		    return html;
+		var display = function(myObj) {
+			document.querySelector("#main-img").src = photos[myObj];
+			document.querySelector("#caption").innerHTML = captions[myObj];
 		}
 
-		// This function takes the formatted HTML
-		// and inserts it into the document as
-		// 'child' HTML of the specified element.
-		function insertHTML(id, html) {
-		    var el = document.getElementById(id);
-		    
-		    if(!el) {
-		        alert('Element with id ' + id + ' not found.');
-		    }
-		    
-		    el.innerHTML = html;
-		}
-
-		// This function ties things up.
-		function run() {
-		    var html = createTable(data);
-		    
-		    insertHTML('tabledata', html);
-		}
 	</script>
 </head>
 <body>
 	<center><h1>Davi's Photo Gallery</h1></center>
 	<div id="container">
 		<div id="main">
-			<img src="" id="main-img">
-			<div id="caption">
-				
+				<img src="" id="main-img">
+				<div id="caption">
 			</div>
 		</div>
 		<div id="medium">
@@ -131,9 +89,8 @@
 			<img src="" id="medium-img3" class="medium-img">
 			<center><button onclick="getPhoto2()">Get a photo!</button></center>
 		</div>
-		<div id="thumbnails">
-			
-		</div>
+		<center><div id="thumbnails">
+		</div></center>
 	</div>
 </body>
 </html>
