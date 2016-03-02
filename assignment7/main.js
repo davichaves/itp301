@@ -58,11 +58,20 @@ var websiteKeywords = ['photo,sharing,app',
 					   'Domains,Sales,Technology', 
 					   'Entrepeneurs,Initial,Help', 
 					   'Sales,offers,cheap', 
-					   'Friends,Media,Grtoups,Posts,Interaction', 
+					   'Friends,network,Interaction', 
 					   'Channel,Subscribe,Videos', 
 					   'Connections,Job,Recruiter,Intern,Internship'];
 
 var myDiv = document.querySelector("#sites");
+
+document.getElementById('myInput').onkeypress = function(e) {
+    var event = e || window.event;
+    var charCode = event.which || event.keyCode;
+	if ( charCode == '13' ) {
+      	search();
+      	return false;
+    }
+}
 
 function display(index){
 	var previousHTML = myDiv.innerHTML;
