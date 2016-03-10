@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Midterm: Practical</title>
+
+	<style>
+		#container {
+			padding: 20px;
+		}
+
+		#msgContainer {
+			margin: 10px 0;
+			min-height: 20px;
+		}
+
+		#msg {
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="container">
+
+		<h1>Book Inventory</h1>
+
+		<div id="msgContainer">
+			<div id="msg"></div>
+		</div>
+
+		<div id="bookInfoForm">
+			Title:
+			<input type="text" id="title">
+			<br>
+			Author:
+			<input type="text" id="author">
+			<br>
+			Year:
+			<input type="text" placeholder="YYYY" id="year">
+			<br>
+			<br>
+			<button onclick="addBook()">Add Book</button>
+			<button onclick="listBooks()">List All Books</button>
+			<button onclick="listBooksAuthors()">List Books with Authors</button>
+			<br>
+		</div>
+
+		<ol id="bookList"></ol>
+
+	</div>
+
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="jquery-1.12.1.js"></script>
+</body>
+</html>
