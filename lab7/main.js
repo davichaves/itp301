@@ -1,27 +1,30 @@
-var jsonObj = {
-	"firstName":"Tommy",
-	"lastName":"Trojan",
-	"age":21,
-	"phone":{
-		"cell":"123-123-1234",
-		"home":"789-789-7890"
-	},
-	"friends":[
-		{
-			"firstName":"John", 
-			"lastName":"Smith"
-		},
-		{
-			"firstName":"Jane", 
-			"lastName":"Doe"
-		}
-	]
-};
-
-
-var jsonStr = '{"firstName":"Tommy","lastName":"Trojan","age":21,"phone":{"cell":"123-123-1234","home":"789-789-7890"},"friends":[{"firstName":"John", "lastName":"Smith"},{"firstName":"Jane", "lastName":"Doe"}]}';
-
+$(function() {
+	$('#search-btn').on('click', function() {
+		var searchTerm = $('#search-term').val();
+		searchTerm = searchTerm.replace( /\s/g, '+' );
+		var searchScript = document.createElement('script');
+		searchScript.src = 'https://itunes.apple.com/search?term=' + searchTerm + '&callBack=getSongs';
+		$('body').append(searchScript);
+	});
+});
 
 /**********
  * JSONP
  **********/
+
+function getSongs(){
+ 	var resultHTML = '';
+
+ 	for (var i = 0; i < data.resultCount; i++) {
+ 		resultHTML += '<td><img src=' +  + '></td>'
+ 		resultHTML += '<td>' +  + '</td>'
+ 		resultHTML += '<td>' +  + '</td>'
+ 		resultHTML += '<td>' +  + '</td>'
+ 		resultHTML += '<td>' +  + '</td>'
+ 		resultHTML += '<td>' +  + '</td>'
+ 		resultHTML += '<td>' +  + '</td>'
+ 		resultHTML += '<td><audio src=' +  + '></audio></td>'
+ 	}
+
+ 	document.getElementById('table-rows').innerHTML = resultHTML;
+}
