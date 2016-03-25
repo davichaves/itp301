@@ -26,6 +26,7 @@
 	<div id="search-box">
 		Search: <input type="text" id="search-term">
 		<br/>
+		Limit: <input type="number" id="limit-search">
 		<button id="search-btn">Search</button>
 	</div>
 	<div id="search-results">
@@ -42,14 +43,7 @@
 					<th>Preview</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr id="table-rows">
-					<td><img src="http://is1.mzstatic.com/image/pf/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg"></td>
-					<td>The Beatles</td>
-					<td>Here Comes the Sun</td>
-					<td>Abbey Road</td>
-					<td><audio src="http://a184.phobos.apple.com/us/r1000/017/Music6/v4/e7/78/b5/e778b5ed-87d7-d81c-ef4e-ce2065ac8b55/mzaf_7495287073647867305.plus.aac.p.m4a" controls></audio></td>
-				</tr>
+			<tbody id="table-rows">
 			</tbody>
 		</table>
 	</div>
