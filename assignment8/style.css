@@ -1,13 +1,3 @@
-#main-img {
-	height: 300px;
-	width: auto;
-}
-
-.medium-img {
-	height: 150px;
-	width: auto;
-}
-
 #main {
 	height: 350px;
 	text-align: center;
@@ -17,10 +7,5 @@
 #medium {
 	height: 170px;
 	text-align: center;
-	margin: 10px;
-}
-
-#caption {
-	font-size: 14pt;
 	margin: 10px;
 }
